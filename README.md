@@ -1,4 +1,4 @@
-# PlayStation 5 with piSCSI OTG
+# PlayStation 5 with piSCSI and USB3 OTG
 
 I’m a moderate player on PlayStation 5. I love to play with my wife together some games if the game allows.
 
