@@ -65,7 +65,7 @@ How to accomplish that with my Rock Pi 5? I followed the wonderful guide of http
 
 On my Synology I created 2 LUNs. One for storage and one for backup.
 
-On the RockPi installed the following package:
+On the RockPi I installed the following package:
 ```
 apt update
 apt install open-iscsi
