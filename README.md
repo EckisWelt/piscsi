@@ -65,3 +65,5 @@ How to accomplish that with my Rock Pi 5? I followed the wonderful guide of http
 On my Synology I created 2 LUNs. One for storage and one for backup.
 
 On the RockPi I created the following script piscsi and 2 selector scripts to switch between storage and backup. Both are not possible to be used at the same time.
+
+In crontab -e I added the following command `@reboot bash -x /root/piscsi.sh >> /root/piscsi.log 2>&1`.
