@@ -1,12 +1,14 @@
-#!/bin/bash -ex
+#!/bin/bash
 iscsiadm -m discovery -t st -p {IP}
 iscsiadm -m node --targetname "{LUN storage}" --portal "{IP/Port}" --login
 iscsiadm -m node --targetname "{LUN backup}" --portal "{IP/Port}" --login
-#/sbin/modprobe g_mass_storage file=/dev/sda stall=0
 
 sleep 2
 
 modprobe libcomposite
+
+sleep 2
+
 mkdir -p /sys/kernel/config/usb_gadget/piscsi-storage
 cd /sys/kernel/config/usb_gadget/piscsi-storage
 
