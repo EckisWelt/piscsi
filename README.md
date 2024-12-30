@@ -67,8 +67,8 @@ On my Synology I created 2 LUNs. One for storage and one for backup.
 
 On the RockPi installed the following package:
 ```
-apt-get update
-apt -get install open-iscsi
+apt update
+apt install open-iscsi
 ```
 
 I created the following script `piscsi.sh` and 2 selector scripts to switch between storage and backup. Both are not possible to be used at the same time. There is another script I found https://gist.github.com/eballetbo/e55ac48a620476a3ec1f860947194c55 but this doesn't work, as it doesn't publish as an USB storage.
