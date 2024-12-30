@@ -28,7 +28,8 @@ https://radxa.com/products/rock4/4bp#downloads. This forwards to https://github.
 
 The releases are quite old. But don’t worry. Just download it, install it on a SD with etcher and update it through apt update/upgrade.
 
-## Compile Kernel (I’m not quite sure, if I still need it, as I don’t rely anymore on g_mass_storage) 
+## Compile Kernel
+(I’m not quite sure, if I still need it, as I don’t rely anymore on g_mass_storage) 
 
 https://radxa-repo.github.io/bsp/getting_started.html 
 
