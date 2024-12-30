@@ -1,4 +1,5 @@
 #!/bin/bash
+# Setup iSCSI devices
 iscsiadm -m discovery -t st -p {IP}
 iscsiadm -m node --targetname "{LUN storage}" --portal "{IP/Port}" --login
 iscsiadm -m node --targetname "{LUN backup}" --portal "{IP/Port}" --login
@@ -9,6 +10,7 @@ modprobe libcomposite
 
 sleep 2
 
+# Setup piSCSI Storage
 mkdir -p /sys/kernel/config/usb_gadget/piscsi-storage
 cd /sys/kernel/config/usb_gadget/piscsi-storage
 
@@ -33,8 +35,10 @@ echo 0        > functions/mass_storage.usb0/lun.0/ro
 echo /dev/sda > functions/mass_storage.usb0/lun.0/file
 
 ln -s functions/mass_storage.usb0 configs/c.1/
+# This is the trigger to activate it. But only one can run at a time.
 #ls /sys/class/udc > UDC
 
+# Setup piSCSI Backup
 mkdir -p /sys/kernel/config/usb_gadget/piscsi-backup
 cd /sys/kernel/config/usb_gadget/piscsi-backup
 
@@ -59,4 +63,5 @@ echo 0        > functions/mass_storage.usb0/lun.0/ro
 echo /dev/sdb > functions/mass_storage.usb0/lun.0/file
 
 ln -s functions/mass_storage.usb0 configs/c.1/
+# This is the trigger to activate it. But only one can run at a time.
 ls /sys/class/udc > UDC
