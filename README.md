@@ -74,3 +74,5 @@ apt install open-iscsi
 I created the following script `piscsi.sh` and 2 selector scripts to switch between storage and backup. Both are not possible to be used at the same time. There is another script I found https://gist.github.com/eballetbo/e55ac48a620476a3ec1f860947194c55 but this doesn't work, as it doesn't publish as an USB storage.
 
 In crontab -e I added the following command `@reboot bash -x /root/piscsi.sh >> /root/piscsi.log 2>&1`.
+
+Maybe you might need to set in `rsetup` the OTG mode to 'Peripheral'.
