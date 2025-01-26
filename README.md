@@ -28,7 +28,7 @@ So in the end the solution is very easy. No need to patch kernels.
 
 ## Install OS 
 
-https://radxa.com/products/rock4/4bp#downloads. This forwards to https://github.com/radxa-build/rock-pi-4b-plus/releases 
+https://radxa.com/products/rock4/4bp#downloads. This forwards to https://github.com/radxa-build/rock-pi-4b-plus/releases
 
 The releases are quite old. But don’t worry. Just download it, install it on a SD with etcher and update it through apt update/upgrade.
 
